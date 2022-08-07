@@ -5,13 +5,13 @@ function generateColor() {
     array.push(index)
   }
   let color = array.join(', ')
-  return "rgb(" + color + ")"
+  return "(" + color + ")";
 }
 
 function sixColor() {
   let array = [];
   for (let i = 0; i < 5; i += 1) {
-    let colorRGB = generateColor();
+    let colorRGB = "rgb" + generateColor();
     array.push(colorRGB)
   }
   let colorRef = document.getElementById('rgb-color').innerHTML;
@@ -57,6 +57,16 @@ function checkAnswer(event) {
   }
 }
 
+function resetGame() {
+  const colorRef = document.getElementById('rgb-color');
+  colorRef.innerHTML = generateColor()
+
+  attributeColor()
+
+  const answer = document.getElementById('answer');
+  answer.innerHTML = '"Escolha uma cor"'
+}
+
 window.onload = function() {
   attributeColor();
 
@@ -64,4 +74,7 @@ window.onload = function() {
   for (let i = 0; i < circles.length; i += 1) {
     circles[i].addEventListener('click', checkAnswer)
   }
+
+  const botaoReset = document.getElementById('reset-game');
+  botaoReset.addEventListener('click', resetGame)
 }
