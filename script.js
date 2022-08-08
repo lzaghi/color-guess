@@ -38,6 +38,13 @@ function attributeColor() {
   }
 }
 
+function somaPontos() {
+  let score = document.getElementById('score');
+  let pontos = parseInt(score.innerHTML)
+  pontos += 3
+  score.innerHTML = pontos
+}
+
 function checkAnswer(event) {
   const stringRef = document.getElementById('rgb-color').innerHTML;
   const stringCor = event.target.style.backgroundColor;
@@ -51,6 +58,7 @@ function checkAnswer(event) {
  
   if (integersRef === integersCor) {
     answer.innerHTML = "Acertou!"
+    somaPontos()
   }
   else {
     answer.innerHTML = "Errou! Tente novamente!"
