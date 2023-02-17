@@ -30,18 +30,26 @@ function sixColorShuffled() {
   return array
 }
 
+function borderChange(color, event) {
+  event.target.style.className.add('border-hover')
+}
+
 function attributeColor() {
+  const outerCircle = document.getElementsByClassName('ball-container');
   const circles = document.getElementsByClassName('ball');
   let colors = sixColorShuffled()
   for (let i = 0; i < circles.length; i += 1) {
     circles[i].style.backgroundColor = colors[i];
+    circles[i].style.color = colors[i];
+    outerCircle[i].style.boxShadow = `inset 0px 0px 0px 3px ${colors[i]}`;
   }
 }
 
-function somaPontos() {
+function somaPontos(resposta) {
   let score = document.getElementById('score');
-  let pontos = parseInt(score.innerHTML)
-  pontos += 3
+  let pontos = parseInt(score.innerHTML);
+  if (resposta === 'certa') pontos += 1;
+  if (resposta === 'errada') pontos = 0;
   score.innerHTML = pontos
 }
 
@@ -55,13 +63,14 @@ function checkAnswer(event) {
   const integersCor = stringCor.match(reg).toString()
 
   const answer = document.getElementById('answer')
- 
+
   if (integersRef === integersCor) {
-    answer.innerHTML = "Acertou!"
-    somaPontos()
+    answer.innerHTML = "Acertou! :D"
+    somaPontos('certa')
   }
   else {
-    answer.innerHTML = "Errou! Tente novamente!"
+    answer.innerHTML = "Errou! Tente novamente! ;)"
+    somaPontos('errada')
   }
 }
 
@@ -72,7 +81,7 @@ function resetGame() {
   attributeColor()
 
   const answer = document.getElementById('answer');
-  answer.innerHTML = '"Escolha uma cor"'
+  answer.innerHTML = 'Escolha uma cor'
 }
 
 window.onload = function() {

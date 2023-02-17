@@ -1,7 +1,81 @@
+body {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+#balls-container {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball-container {
+  margin-inline: 3px;
+  /* border: 3px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
 .ball {
-  border: 1px solid black;
   width: 50px;
   height: 50px;
   display: inline-block;
   border-radius: 100%;
+  transition: 0.5s;
+}
+
+.ball:hover {
+  transition: 0.2s;
+  width: 58px;
+  height: 58px;
+  cursor: pointer;
+  border: 3px solid;
+  border-color: currentColor;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 100px 100px 100px 100px;
+  transition: 0.3s;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+button:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#title,
+#question,
+#balls-container,
+#reset-game,
+#score-board {
+  margin-top: 3%;
+}
+
+#score-board {
+  border: 3px solid lightgray;
+  width: 100px;
+  margin-inline: auto;
+  border-radius: 20px;
+  font-size: large;
+  padding-bottom: 15px;
+}
+
+#score-board p {
+  border-bottom: 3px solid lightgray;
+  padding-bottom: 4px;
+  margin-bottom: 30px;
+  width: fit-content;
+  margin-inline: auto;
 }
