@@ -30,10 +30,6 @@ function sixColorShuffled() {
   return array
 }
 
-function borderChange(color, event) {
-  event.target.style.className.add('border-hover')
-}
-
 function attributeColor() {
   const outerCircle = document.getElementsByClassName('ball-container');
   const circles = document.getElementsByClassName('ball');
