@@ -1,13 +1,46 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# Color Guess
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Esse é um jogo em que o objetivo é acertar qual cor corresponde ao cóodigo RGB exibido, a partir de uma paleta de cores aleatórias.
+
+O foco dessa aplicação foi explorar a manipulação de elementos DOM.
+
+[Experimente!](https://lzaghi.github.io/color-guess/)
+
+## Funcionalidades
+
+- Geração de uma paleta inicial aleatória
+- Possibilidade de resetar a paleta com novas cores aleatórias
+- Escolher cor da paleta e receber feedback de acerto ou erro
+- Placar que acumula pontos para acertos consecutivos
+- Placar zerado e novas tentativas em caso de erro
+
+## Demonstração
+
+![](color.gif)
+
+
+## Tecnologias utilizadas
+
+HTML, CSS, JavaScript, DOM
+
+
+## Instalação local
+
+1. Clone o repositório 
+```bash
+  git clone git@github.com:lzaghi/color-guess.git
+```
+
+2. Entre no diretório 
+```bash
+  cd color-guess
+```
+
+3. Instale as dependências 
+```bash
+  npm install
+```
+4. Inicie a aplicação com a extensão Live Server do VSCode
+    
+
