@@ -3,7 +3,7 @@
 
 Esse é um jogo em que o objetivo é acertar qual cor corresponde ao código RGB exibido, a partir de uma paleta de cores aleatórias.
 
-O foco dessa aplicação foi explorar a manipulação de elementos DOM.
+O foco dessa aplicação foi explorar a manipulação de elementos DOM e os escutadores de eventos.
 
 [Experimente!](https://lzaghi.github.io/color-guess/)
 
