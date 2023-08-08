@@ -1,7 +1,7 @@
 
 # Color Guess
 
-Esse é um jogo em que o objetivo é acertar qual cor corresponde ao cóodigo RGB exibido, a partir de uma paleta de cores aleatórias.
+Esse é um jogo em que o objetivo é acertar qual cor corresponde ao código RGB exibido, a partir de uma paleta de cores aleatórias.
 
 O foco dessa aplicação foi explorar a manipulação de elementos DOM.
 
